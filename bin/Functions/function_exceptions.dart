@@ -1,29 +1,31 @@
 import 'dart:io';
 
 main() {
-  //info();
+  // Call the ageCalc function to calculate and display age.
   ageCalc();
 }
 
-///Example 1
+/// Example 1: Demonstrates exception handling using a for loop.
 void info() {
-  //exceptions is better handled with try and catch block
+  // Exceptions are better handled with try and catch blocks.
   try {
     for (var i = 0; i <= 10; i++) {
       if (i == 5) {
-        /// types of exceptions
-        throw 'Error';
-        //throw Exception('Error');
-        //throw FormatException('Error');
+        /// Types of exceptions:
+        // Uncomment and test these different exception types.
+        // throw 'Error';
+        // throw Exception('Error');
+        // throw FormatException('Error');
       }
       print('i = $i');
     }
   } catch (e) {
+    // Print the caught exception.
     print(e);
   }
 }
 
-///Example 2
+/// Example 2: Calculates and displays the user's age.
 void ageCalc() {
   while (true) {
     try {
@@ -32,15 +34,19 @@ void ageCalc() {
 
       var currentAge = DateTime.now().year;
       var age = currentAge - birth;
-      if (birth > currentAge) throw 'talk your real age na';
-      if (age < 6) throw Exception('you are under 6 years old');
-      if (age == 0) throw Exception('you cant be Zero year old');
 
+      // Validate user input and handle exceptions accordingly.
+      if (birth > currentAge) throw 'Talk your real age, please';
+      if (age < 6) throw Exception('You are under 6 years old');
+      if (age == 0) throw Exception("You can't be Zero years old");
+
+      // Use Future.delayed to simulate asynchronous behavior.
       Future.delayed(Duration(seconds: 3), () {
-        print('you are $age years old');
+        print('You are $age years old');
       });
-      break;
+      break; // Exit the loop after successful age calculation.
     } catch (e) {
+      // Handle exceptions by printing an error message.
       print(e);
     }
   }

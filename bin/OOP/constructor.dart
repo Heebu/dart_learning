@@ -1,48 +1,51 @@
 main() {
+  // Create a 'Human' object 'h' using the constructor.
   Human h = Human('Idris', 22, 5.9, 'Male');
 
-  ///normal way 1
+  // Set values for 'h' using a setter method.
   h.setValue('Taiwo', 52, 5.9, 'male');
 
-  ///trying a loop with class 2
+  // Create a list of staff members with their information.
   List admin = ['Shukurah', 30, 4.9, 'female'];
   List director = ['Adedeji', 62, 6.1, 'Male'];
   List manager = ['Omolabake', 20, 5.1, 'female'];
 
+  // Create a list 'staffMembers' containing lists of staff information.
   List staffMembers = [admin, director, manager];
 
   int i = 0;
+
+  // Loop through 'staffMembers' and create 'Human' objects for each staff member.
   do {
-    h.setValue(staffMembers[i][0], staffMembers[i][1], staffMembers[i][2],
-        staffMembers[i][3]);
+    // Create a 'Human' object and set its values using a setter method.
+    h.setValue(
+        staffMembers[i][0], staffMembers[i][1], staffMembers[i][2], staffMembers[i][3]);
     i++;
   } while (i < staffMembers.length);
 }
 
+// Define a class 'Human'.
 class Human {
   String? name;
   int? age;
   double? height;
   var gender;
 
-  ///a constructor 2
-  // a constructor must  be called  immediately the class is executed and must be void
+  // Constructor 1: Initialize 'Human' with values when an object is created.
   Human(String names, int ages, double heights, String genders) {
     name = names;
     height = heights;
     age = ages;
     gender = genders;
-    print(
-        'A $gender name is $name, I am $age years old and I am $height ft tall');
+    print('A $gender named $name, I am $age years old, and I am $height ft tall');
   }
 
-  /// 1
+  // Setter method to set values for 'Human'.
   setValue(String names, int ages, double heights, String genders) {
     name = names;
     height = heights;
     age = ages;
     gender = genders;
-    print(
-        'A $gender name is $name, I am $age years old and I am $height ft tall');
+    print('A $gender named $name, I am $age years old, and I am $height ft tall');
   }
 }

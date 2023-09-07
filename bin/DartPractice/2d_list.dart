@@ -1,4 +1,5 @@
 main() {
+  // Create lists containing information about food, age, and height.
   var food = <String>[
     'rice',
     'beans',
@@ -20,20 +21,15 @@ main() {
     5.8,
     5.4,
   ];
+
+  // Create a list 'a' that contains the three lists.
   var a = [
     food,
     age,
     height,
   ];
-/*
-  for (int i = 0; i < a.length; i++) {
-    for (int j = 0; j < age.length; j++) {
-      print(a[i][j]);
-    }
-  }
-  */
 
-  ///of items
+  // Iterate through 'a' to print each item.
   for (var items in a) {
     for (var i in items) {
       print(i);

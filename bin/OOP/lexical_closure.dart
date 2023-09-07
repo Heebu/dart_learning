@@ -1,17 +1,21 @@
 main() {
+  // Define a function 'lex'.
   Function lex() {
-    var message;
+    var message; // Declare a local variable 'message'.
+
+    // Define a nested function 'say' that takes a 'msg' parameter.
     Function say = (String msg) {
-      message = msg;
-      print(message);
+      message = msg; // Set the 'message' variable to the value of 'msg'.
+      print(message); // Print the 'message'.
     };
-    return say;
+
+    return say; // Return the 'say' function.
   }
 
-  //calling a function inside a function
-  var f = lex();
-  f('Hello');
+  // Calling the 'lex' function to get the 'say' function and then calling 'say' with 'Hello'.
+  var f = lex(); // 'f' now holds the 'say' function.
+  f('Hello');   // Output: 'Hello'
 
-  //short form
-  lex()('Hi');
+  // Calling the 'lex' function and immediately invoking 'say' with 'Hi'.
+  lex()('Hi');  // Output: 'Hi'
 }

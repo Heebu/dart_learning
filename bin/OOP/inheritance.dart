@@ -1,17 +1,20 @@
 main() {
+  // Create an instance of class 'C'.
   C c = C();
-  c.info();
+
+  // Call the 'info' method of class 'C'.
+  c.info(); // Output: 'Hi'
 }
 
-//indirect super class to C
+// Define class 'A' as an indirect super class to 'C'.
 class A {
   void info() {
     print('Hi');
   }
 }
 
-//Direct super class to C
+// Define class 'B' as a direct super class to 'C'.
 class B extends A {}
 
-//sub class
+// Define class 'C' as a sub class of 'B'.
 class C extends B {}

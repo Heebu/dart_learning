@@ -1,23 +1,33 @@
 import 'dart:math';
 
 main() {
+  // Access individual enum values.
   print(Color.red);
-  print(Color.values);
-  print(Color.values[1]);
-  print(Color.values.length);
-  //Enum class acts like a list
 
+  // Access all enum values as a list.
+  print(Color.values);
+
+  // Access a specific enum value by index.
+  print(Color.values[1]);
+
+  // Get the number of enum values.
+  print(Color.values.length);
+
+  // Call the 'info' function with an enum value and print the result.
   print(info(Color.values[1]));
 
-  //print(Colors2.black);
+  // Uncommenting this line will result in an error because Colors2 is not used in the code.
+  // print(Colors2.black);
 }
 
+// Define an enum 'Color' to represent different colors.
 enum Color {
   red,
   blue,
   black,
 }
 
+// Define a function 'info' to convert an enum value into a string.
 String info(Color s) {
   switch (s) {
     case Color.red:
@@ -29,6 +39,7 @@ String info(Color s) {
   }
 }
 
+// Define a class 'Colors2' with constant string values representing colors.
 class Colors2 {
   static const red = 'red';
   static const blue = 'blue';

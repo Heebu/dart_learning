@@ -1,4 +1,3 @@
-import 'package:test/expect.dart';
 
 main() {
   final f1 = Future(info);

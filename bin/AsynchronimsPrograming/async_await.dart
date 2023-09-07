@@ -15,7 +15,7 @@ main() {
   var sub = s1.listen((_) => _);
 
   sub.onData((data) {
-    data < 10 ? print('less than 10') : sub.cancel();
+    data < 10 ? print('less than 10') : print('greater than 10');
   });
   sub.onDone(() {
     print('Done');
@@ -24,6 +24,7 @@ main() {
   sub.onError((error) {
     print(error);
   });
+  //sub.cancel();
   //sub.pause();
 }
 
