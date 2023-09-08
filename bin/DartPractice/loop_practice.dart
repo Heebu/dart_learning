@@ -8,36 +8,37 @@ void main() {
     'Oblak'
   ];
 
-  ///while loop
+  /// while loop
   int i = 0;
   while (i < names.length) {
     print('My name is ${names[i]}');
     i++;
   }
 
-  ///do before the loop
+  /// do-while loop
+  i = 0; // Resetting 'i' for the next loop
   do {
     print('My name is ${names[i]}');
     i++;
-  } while (i > names.length);
+  } while (i < names.length);
 
-  ///for each element loop
+  /// for-each element loop (using a for-in loop)
   for (String element in names) {
     print(element);
   }
 
-  ///for each loop
+  /// for-each loop (using forEach)
   names.forEach((element) {
     print(element);
   });
 
+  /// for loop
   for (int m = 0; m < names.length; m++) {
     print('for loop ${names[m]}');
   }
 
-  ///infinite loop
-  //while (true) {
-  //     print('Hi');
-  //
-  //   }
+  /// Infinite loop (commented out)
+  // while (true) {
+  //   print('Hi');
+  // }
 }

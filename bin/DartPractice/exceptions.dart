@@ -1,38 +1,6 @@
 import 'dart:io';
 
-/// this for the use of try and catch errors
-// main() {
-//   print('Type in your year of birth');
-//
-//   try {
-//     var year = num.parse(stdin.readLineSync()!);
-//     var age = DateTime.now().year - year;
-//     Future.delayed(
-//       Duration(seconds: 3),
-//       () {
-//         if (year > DateTime.now().year) {
-//           print('your age is not correct');
-//           print('please put in a correct age');
-//           Future.delayed(Duration(seconds: 2), () {
-//             main();
-//           });
-//         } else {
-//           print('that is, you are $age years old');
-//         }
-//       },
-//     );
-//   } catch (e) {
-//     print(e);
-//     print('please enter a valid number');
-//     Future.delayed(Duration(seconds: 2), () {
-//       main();
-//     });
-//   }
-// }
-
-///using an infinite loop (simpler method)
-
-main() {
+void main() {
   print('Type in your year of birth');
 
   while (true) {
@@ -41,22 +9,22 @@ main() {
       var age = DateTime.now().year - year;
       Future.delayed(
         Duration(seconds: 3),
-        () {
+            () {
           if (year > DateTime.now().year) {
-            print('your age is not correct');
-            print('please put in a correct age');
+            print('Your age is not correct');
+            print('Please put in a correct age');
             Future.delayed(Duration(seconds: 2), () {
-              main();
+              main(); // Restart the process if the age is not valid.
             });
           } else {
-            print('that is, you are $age years old');
+            print('That is, you are $age years old');
           }
         },
       );
-      break;
+      break; // Exit the loop when a valid input is provided.
     } catch (e) {
       print(e);
-      print('please enter a valid number');
+      print('Please enter a valid number');
     }
   }
 }

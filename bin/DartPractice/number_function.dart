@@ -1,42 +1,42 @@
 void main() {
   num x = -8.421;
 
-  //the actual number
-  print('${x}');
+  // The actual number
+  print('${x}'); // Output: -8.421
 
-  //the type of value
-  print('${x.runtimeType}');
+  // The type of value
+  print('${x.runtimeType}'); // Output: double
 
-  // convert to string
-  print('${x.toString()}');
+  // Convert to string
+  print('${x.toString()}'); // Output: -8.421
 
-  //its sign
-  print('${x.sign}');
+  // Sign of the number (-1 for negative, 0 for zero, 1 for positive)
+  print('${x.sign}'); // Output: -1
 
-  //if its finite
-  print('${x.isFinite}');
+  // Check if the number is finite
+  print('${x.isFinite}'); // Output: true
 
-  //
-  print('${x.isNaN}');
+  // Check if the number is NaN (Not-a-Number)
+  print('${x.isNaN}'); // Output: false
 
-  //if negative
-  print('${x.isNegative}');
+  // Check if the number is negative
+  print('${x.isNegative}'); // Output: true
 
-  //it's absolute
-  print('${x.abs()}');
+  // Absolute value of the number
+  print('${x.abs()}'); // Output: 8.421
 
-  // to the highest number
-  print('${x.ceil()}');
+  // Round up to the nearest integer
+  print('${x.ceil()}'); // Output: -8
 
-  //
-  print('${x.floor()}');
+  // Round down to the nearest integer
+  print('${x.floor()}'); // Output: -9
 
-  //remainer when dived with 5
-  print('${x.remainder(5)}');
+  // Remainder when divided by 5
+  print('${x.remainder(5)}'); // Output: -3.421
 
-  //round up
-  print('${x.round()}');
+  // Round to the nearest integer
+  print('${x.round()}'); // Output: -8
 
-  // to the lowest round up
-  print('${x.truncate()}');
+  // Truncate towards zero (remove decimal part)
+  print('${x.truncate()}'); // Output: -8
 }

@@ -8,9 +8,7 @@ void main() {
     'Oblak'
   ];
 
-  ///Nested loop
   int i = 0;
-
   while (i < names.length) {
     int j = 0;
     while (j < names.length) {
