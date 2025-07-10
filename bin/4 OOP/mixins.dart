@@ -27,7 +27,7 @@ mixin C {
 
 // The 'with' keyword is used to inherit from multiple classes.
 // Class D inherits from class B, and uses mixin A and mixin C.
-class D extends B with A, C {
+class D with C implements A, B{
   @override
   void info1() {
     print('Message 1');
@@ -36,5 +36,10 @@ class D extends B with A, C {
   @override
   void info2() {
     print('Message 2');
+  }
+
+  @override
+  void info3() {
+    print('Message 3');
   }
 }

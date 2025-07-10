@@ -12,7 +12,7 @@ main() {
     (a) => a,
   );
 
-  var sub = s1.listen((_) => _);
+  var sub = s1.listen((value) => value);
 
   sub.onData((data) {
     data < 10 ? print('less than 10') : print('greater than 10');
